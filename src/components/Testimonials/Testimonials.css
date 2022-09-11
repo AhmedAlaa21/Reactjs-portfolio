@@ -1,5 +1,6 @@
 .container.testimonials_container {
   width: 40%;
+  padding-bottom: 4rem;
 }
 
 .client_avatar {
@@ -28,25 +29,8 @@
     margin: 0.8rem auto 0;
 }
 
-/* Media Queries for Small devices */
-@media screen and (max-width: 600px) {
-  .about_me {
-    width: 65%;
-    margin: 0 auto 3rem;
-  }
-
-  .about_cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .about_content{
-    text-align: center;
-  }
-
-  .about_content p{
-    margin: 1.5rem 0;
-  }
+.swiper-pagination-bullet-clickable .swiper-pagination-bullet{
+    background: var(--color-primary);
 }
 
 @media screen and (max-width: 1024px) {
