@@ -22,8 +22,8 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          if(result.status === 200) notify();
-          else notify2()
+          if (result.status === 200) notify();
+          else notify2();
           e.target.reset();
         },
         (error) => {
@@ -35,15 +35,14 @@ const Contact = () => {
 
   const notify = () => {
     toast.success("We received your message, Thank you", {
-      position: toast.POSITION.BOTTOM_CENTER
-    });  
-  }
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+  };
   const notify2 = () => {
     toast.error("Error occured please try again!", {
-      position: toast.POSITION.BOTTOM_CENTER
+      position: toast.POSITION.BOTTOM_CENTER,
     });
-  }
-
+  };
 
   return (
     <section id="contact">
@@ -78,9 +77,9 @@ const Contact = () => {
           <article className="contact_option">
             <BsWhatsapp className="contact_option-icon" />
             <h4>Whatsapp</h4>
-            <h5>+20 114-224-5739</h5>
+            <h5>+20 155-280-6867</h5>
             <a
-              href="https://api.whatsapp.com/send?phone=01142245739"
+              href="https://api.whatsapp.com/send?phone=01552806867"
               target="_blank"
               rel="noreferrer"
             >
@@ -108,7 +107,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-     <ToastContainer />
+      <ToastContainer />
     </section>
   );
 };
