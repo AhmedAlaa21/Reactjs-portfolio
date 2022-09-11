@@ -10,6 +10,7 @@ A react.js full responsive webstite.
 - React.js
 - JSX
 - React Libraries
+- css grid
 
 
 ### Site Capture
