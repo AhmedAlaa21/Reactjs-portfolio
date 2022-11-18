@@ -1,10 +1,10 @@
 import React from "react";
 import "./Portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.png";
+import IMG1 from "../../assets/1.png";
+import IMG2 from "../../assets/2.png";
+import IMG3 from "../../assets/3.png";
+import IMG4 from "../../assets/4.png";
+import IMG5 from "../../assets/5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
 
 const Portfolio = () => {
@@ -12,38 +12,44 @@ const Portfolio = () => {
     {
       id: "1",
       imgPath: IMG1,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "Gericht Fine Dining",
+      url: "https://gericht-beta.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/Gericht",
     },
     {
       id: "2",
       imgPath: IMG2,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "Delta Security System",
+      url: "https://delta-liart.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/delta",
     },
     {
       id: "3",
       imgPath: IMG3,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "Animated Portofolio - Figma",
+      url: "https://animated-portfolio-rust.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/Animated-Portfolio",
     },
     {
       id: "4",
       imgPath: IMG4,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "DeFi - Crypto News",
+      url: "https://de-fi-phi.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/DeFi",
     },
     {
       id: "5",
       imgPath: IMG5,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "IGCSE 2021 Prosecution",
+      url: "https://ig-ashen.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/IGCSE-Prosecution",
     },
     {
       id: "6",
       imgPath: IMG6,
-      title: "This is a portfolio item title",
-      // TODO add links
+      title: "TODO App - Add, Edit, Update & Delete ",
+      url: "https://todo-app-dun-seven.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/todo-app",
     },
   ];
   return (
@@ -55,14 +61,24 @@ const Portfolio = () => {
           return (
             <article className="portfolio_item" key={portfolioProject.id}>
               <div className="portfolio_item-image">
-                <img src={portfolioProject.imgPath} alt="" />
+                <img src={portfolioProject.imgPath} alt="project" />
               </div>
               <h3>{portfolioProject.title}</h3>
               <div className="portfolio_item-cta">
-                <a href="" className="btn" target="_blank">
+                <a
+                  href={portfolioProject.gitProject}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>
-                <a href="" className="btn btn-primary" target="_blank">
+                <a
+                  href={portfolioProject.url}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Live Demo
                 </a>
               </div>

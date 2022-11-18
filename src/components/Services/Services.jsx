@@ -10,32 +10,32 @@ const Services = () => {
       <div className="container services_container">
         <article className="service">
           <div className="service_head">
-            <h3>UI/UX Design</h3>
+            <h3>eCommerce Store Management</h3>
           </div>
           <ul className="service_list">
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Product management & Market Analysis</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Creating Eye Catchy Landing pages</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Dealing with Dropshipping stores worldwide</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Woocommerce full setup</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Applying Perfect themes according to owner's prespective</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Creative Ideas to get a good market share</p>
             </li>
           </ul>
         </article>
@@ -47,63 +47,63 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Converting Figma & PSD Desings to Full Optimized Website</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Interactive website with beautiful animations.</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Readable & Reusable Code - Clean Code.</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>React Hooks for state management & updating data. like useState & useEffect</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Fetching Restful APIs with Axios</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Google Maps & Others</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Creating trendy websites like Uber, kwai and TikTok </p>
             </li>
           </ul>
         </article>
         {/* END OF WEB DEVELOPMENT */}
         <article className="service">
           <div className="service_head">
-            <h3>Content Creation</h3>
+            <h3>Digital Marketing</h3>
           </div>
           <ul className="service_list">
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Facebook & Instagram Marketing</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Tiktok and Snapchat campaigns</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Google & Youtube Ads</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Google Analytics & Daily Report</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Problem Solving according to Reports</p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Making Successful Branding Journey</p>
             </li>
           </ul>
         </article>
