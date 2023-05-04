@@ -20,7 +20,7 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_card_icon" />
               <h5>Experience</h5>
-              <small>2+ years Working</small>
+              <small>3+ years Working</small>
             </article>
             <article className="about_card">
               <FiUsers />
@@ -34,11 +34,17 @@ const About = () => {
             </article>
           </div>
           <p>
-            Frontend Web Developer using React.js to build fully optimized & responsive Websites. I'm graduated from Faculty of Science 
-            , Computer Science Dept., I used to manage my eCommerce online stores for 2+ years but always my passion was in Software Development,
-            I found that the best way to do a comeback is to create websites using React.js and it's helpful libs.
+            I am a frontend web developer who utilizes React.js to construct
+            websites that are both fully optimized and responsive. I have a
+            degree from the Computer Science Department in the Faculty of
+            Science and have spent over two years managing my eCommerce online
+            stores. However, my true passion lies in software development, and I
+            have found that the most effective way to pursue this passion is by
+            creating websites using React.js and its fundamentals.
           </p>
-          <a href="#contact" className="btn btn-primary">Let`s Talk</a>
+          <a href="#contact" className="btn btn-primary">
+            Let`s Talk
+          </a>
         </div>
       </div>
     </section>
