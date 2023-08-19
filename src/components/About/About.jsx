@@ -4,6 +4,7 @@ import ME from "../../assets/ME2.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import CountUp from "react-countup";
 
 const About = () => {
   return (
@@ -20,27 +21,29 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_card_icon" />
               <h5>Experience</h5>
-              <small>3+ years Working</small>
+              <small>
+                <CountUp start={-5} end={4} duration={5} />+ years working
+              </small>
             </article>
             <article className="about_card">
               <FiUsers />
               <h5>Clients</h5>
-              <small>5+ clients Worldwide</small>
+              <small>
+                <CountUp start={0} end={7} duration={5} />+ Satisfied Clients
+              </small>
             </article>
             <article className="about_card">
               <VscFolderLibrary />
               <h5>Projects</h5>
-              <small>20+ completed</small>
+              <small>
+                <CountUp start={0} end={60} duration={5} />+ completed Projects
+              </small>
             </article>
           </div>
           <p>
-            I am a frontend web developer who utilizes React.js to construct
-            websites that are both fully optimized and responsive. I have a
-            degree from the Computer Science Department in the Faculty of
-            Science and have spent over two years managing my eCommerce online
-            stores. However, my true passion lies in software development, and I
-            have found that the most effective way to pursue this passion is by
-            creating websites using React.js and its fundamentals.
+            4 years ago, I began freelancing as a developer. Since then,
+            I&apos;ve done remote work for agencies, consulted for startups, and
+            collaborated on digital products for business and consumer use.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let`s Talk
