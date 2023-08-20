@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
 import ME from "../../assets/ME2.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import CountUp from "react-countup";
+import { useScrollContext } from "../../ScrollContext";
 
 const About = () => {
+  const { setActiveIndex } = useScrollContext();
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
+
+      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+        setActiveIndex(1);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [setActiveIndex]);
+
   return (
-    <section id="about">
+    <section id="about" className="section" ref = {sectionRef}>
       <h5>Get to know</h5>
       <h2>About me</h2>
 

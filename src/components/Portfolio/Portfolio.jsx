@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Portfolio.css";
 import IMG1 from "../../assets/1.png";
 import IMG2 from "../../assets/2.png";
@@ -6,8 +6,27 @@ import IMG3 from "../../assets/3.png";
 import IMG4 from "../../assets/4.png";
 import IMG5 from "../../assets/5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
+import { useScrollContext } from "../../ScrollContext";
 
 const Portfolio = () => {
+  const { setActiveIndex } = useScrollContext();
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
+
+      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+        setActiveIndex(3);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setActiveIndex]);
   const portfolioProjects = [
     {
       id: "1",
@@ -53,7 +72,7 @@ const Portfolio = () => {
     },
   ];
   return (
-    <section id="porfolio">
+    <section id="porfolio" className="section" ref={sectionRef}>
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
       <div className="container portfolio_container">

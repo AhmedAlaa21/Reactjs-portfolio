@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect,useRef } from "react";
 import "./Services.css";
 import { BiCheck } from "react-icons/bi";
+import { useScrollContext } from "../../ScrollContext";
+
 
 const Services = () => {
+  const { setActiveIndex } = useScrollContext();
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
+
+      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+        setActiveIndex(3);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [setActiveIndex]);
+
   return (
-    <section id="services">
+    <section id="services" className="section" ref={sectionRef}>
       <h5>What I Offer</h5>
       <h2>Services</h2>
       <div className="container services_container">
@@ -59,7 +80,10 @@ const Services = () => {
             </li>
             <li>
               <BiCheck className="service_list_icon" />
-              <p>React Hooks for state management & updating data. like useState & useEffect</p>
+              <p>
+                React Hooks for state management & updating data. like useState
+                & useEffect
+              </p>
             </li>
             <li>
               <BiCheck className="service_list_icon" />

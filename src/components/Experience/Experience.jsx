@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Experience.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { useScrollContext } from "../../ScrollContext";
+
 const Experience = () => {
+  const { setActiveIndex } = useScrollContext();
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
+
+      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+        setActiveIndex(2);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setActiveIndex]);
   return (
-    <section id="exp">
+    <section id="exp" className="section" ref={sectionRef}>
       <h5>What Skills I Have</h5>
       <h2>My Experience</h2>
       <div className="container exp_container">

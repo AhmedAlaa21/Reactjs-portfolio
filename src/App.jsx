@@ -8,20 +8,21 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { ScrollProvider } from "./ScrollContext";
 
 function App() {
   return (
-    <>
+    <ScrollProvider>
       <Header />
       <Nav />
-      <About />
-      <Experience />
+      <About  />
+      <Experience  />
       <Services />
-      <Portfolio />
+      <Portfolio  />
       {/* <Testimonials /> */}
       <Contact />
       <Footer />
-    </>
+    </ScrollProvider>
   );
 }
 
