@@ -74,7 +74,7 @@ const Portfolio = () => {
   return (
     <section id="porfolio" className="section" ref={sectionRef}>
       <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h2>Sample of Completed Projects</h2>
       <div className="container portfolio_container">
         {portfolioProjects.map((portfolioProject) => {
           return (

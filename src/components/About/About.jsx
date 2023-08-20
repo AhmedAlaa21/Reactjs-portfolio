@@ -34,7 +34,7 @@ const About = () => {
 
       <div className="container about_container">
         <div className="about_me">
-          <img src={ME} alt="about me" />
+          <img src={ME} alt="about me" style={{objectFit: 'cover'}}/>
         </div>
         <div className="about_content">
           <div className="about_cards">
