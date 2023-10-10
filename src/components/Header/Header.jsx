@@ -19,17 +19,17 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [setActiveIndex]);
   return (
-    <header id="start" className="section" ref= {sectionRef}>
+    <header id="start" className="section" ref={sectionRef}>
       <div className="container header_container">
         <h5>Hello I'm</h5>
         <h1>Ahmed Mohamed Alaa</h1>
-        <h5 className="text-light"> React Developer</h5>
+        <h5 className="text-light"> React | Nextjs Developer</h5>
         <CTA />
         <HeaderSocials />
         <div className="me">

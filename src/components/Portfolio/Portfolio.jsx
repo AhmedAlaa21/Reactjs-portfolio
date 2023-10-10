@@ -5,7 +5,9 @@ import IMG2 from "../../assets/2.png";
 import IMG3 from "../../assets/3.png";
 import IMG4 from "../../assets/4.png";
 import IMG5 from "../../assets/5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import IMG6 from "../../assets/6.png";
+import IMG7 from "../../assets/7.png";
+import IMG8 from "../../assets/8.png";
 import { useScrollContext } from "../../ScrollContext";
 
 const Portfolio = () => {
@@ -31,23 +33,23 @@ const Portfolio = () => {
     {
       id: "1",
       imgPath: IMG1,
-      title: "Gericht Fine Dining",
-      url: "https://gericht-beta.vercel.app/",
-      gitProject: "https://github.com/AhmedAlaa21/Gericht",
+      title: "Chatly",
+      url: "https://chatly-tau.vercel.app/app",
+      gitProject: "https://github.com/AhmedAlaa21/chat-app",
     },
     {
       id: "2",
       imgPath: IMG2,
-      title: "Delta Security System",
-      url: "https://delta-liart.vercel.app/",
-      gitProject: "https://github.com/AhmedAlaa21/delta",
+      title: "Tadarab Development Path",
+      url: "https://tadarab-test.vercel.app/development-path",
+      gitProject: "https://github.com/AhmedAlaa21/tadarab-test",
     },
     {
       id: "3",
       imgPath: IMG3,
-      title: "Animated Portofolio - Figma",
-      url: "https://animated-portfolio-rust.vercel.app/",
-      gitProject: "https://github.com/AhmedAlaa21/Animated-Portfolio",
+      title: "Beauty Essence",
+      url: "https://beauty-essence.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/beauty-essence",
     },
     {
       id: "4",
@@ -59,16 +61,30 @@ const Portfolio = () => {
     {
       id: "5",
       imgPath: IMG5,
-      title: "IGCSE 2021 Prosecution",
-      url: "https://ig-ashen.vercel.app/",
-      gitProject: "https://github.com/AhmedAlaa21/IGCSE-Prosecution",
+      title: "Car Hub",
+      url: "https://car-hub-ruddy.vercel.app",
+      gitProject: "https://github.com/AhmedAlaa21/car-hub",
     },
     {
       id: "6",
       imgPath: IMG6,
-      title: "TODO App - Add, Edit, Update & Delete ",
-      url: "https://todo-app-dun-seven.vercel.app/",
-      gitProject: "https://github.com/AhmedAlaa21/todo-app",
+      title: "Nextjs Portfolio",
+      url: "https://ahmedalaa.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/ahmedalaa",
+    },
+    {
+      id: "7",
+      imgPath: IMG7,
+      title: "Lama Store",
+      url: "https://lama-psi.vercel.app/",
+      gitProject: "https://github.com/AhmedAlaa21/Lama",
+    },
+    {
+      id: "8",
+      imgPath: IMG8,
+      title: "Gericht | Fine Dining",
+      url: "https://gericht-beta.vercel.app",
+      gitProject: "https://github.com/AhmedAlaa21/Gericht",
     },
   ];
   return (
@@ -79,7 +95,7 @@ const Portfolio = () => {
         {portfolioProjects.map((portfolioProject) => {
           return (
             <article className="portfolio_item" key={portfolioProject.id}>
-              <div className="portfolio_item-image">
+              <div className="portfolio_item-image-wrapper">
                 <img src={portfolioProject.imgPath} alt="project" />
               </div>
               <h3>{portfolioProject.title}</h3>

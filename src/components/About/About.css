@@ -8,27 +8,27 @@
   width: 100%;
   /* aspect-ratio: 1/1; height will always match width like fb stories */
   border-radius: 2rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     transparent,
     var(--color-primary),
     transparent
-  );
+  ); */
   height: 26.875rem;
   display: grid;
-  place-items: center;
+  place-items: top;
 }
 
 .about_me img {
   border-radius: 2rem;
   overflow: hidden;
-  transform: rotate(10deg);
-  transition: var(--transition);
+  /* transform: rotate(10deg); */
+  /* transition: var(--transition); */
 }
 
-.about_me img:hover {
+/* .about_me img:hover {
   transform: rotate(0);
-}
+} */
 
 .about_cards {
   display: grid;

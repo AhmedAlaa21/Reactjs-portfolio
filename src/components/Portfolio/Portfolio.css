@@ -17,10 +17,23 @@
     background: transparent;
 }
 
-.portfolio_item-image{
+.portfolio_item-image-wrapper{
     border-radius: 1rem;
     overflow: hidden;
-    height: 200px;
+    width: 100%;
+    height: 250px;
+}
+
+.portfolio_item-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 1s ease-in-out;
+}
+
+.portfolio_item-image-wrapper:hover img {
+    object-position: bottom center;
 }
 
 .portfolio_item h3{

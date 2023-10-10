@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import "./About.css";
-import ME from "../../assets/ME2.jpg";
+import ME from "../../assets/Aboutme.png";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import CountUp from "react-countup";
 import { useScrollContext } from "../../ScrollContext";
+import "./About.css";
 
 const About = () => {
   const { setActiveIndex } = useScrollContext();
@@ -21,20 +21,20 @@ const About = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [setActiveIndex]);
 
   return (
-    <section id="about" className="section" ref = {sectionRef}>
+    <section id="about" className="section" ref={sectionRef}>
       <h5>Get to know</h5>
-      <h2>About me</h2>
+      <h2>Who Am I?</h2>
 
       <div className="container about_container">
         <div className="about_me">
-          <img src={ME} alt="about me" style={{objectFit: 'cover'}}/>
+          <img src={ME} alt="about me" style={{ objectFit: "cover" }} />
         </div>
         <div className="about_content">
           <div className="about_cards">
@@ -61,9 +61,12 @@ const About = () => {
             </article>
           </div>
           <p>
-            4 years ago, I began freelancing as a developer. Since then,
-            I&apos;ve done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            Passionate ReactJS and Next.js developer with 3+ years of ReactJS
+            and 1+ year of Next.js experience. Proficient in crafting seamless,
+            interactive user interfaces and optimizing application performance.
+            A collaborator who thrives on teamwork, constantly learning, and
+            staying updated with the latest technologies. Let's connect to
+            create exceptional web experiences!
           </p>
           <a href="#contact" className="btn btn-primary">
             Let`s Talk
