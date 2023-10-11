@@ -20,7 +20,7 @@ const Portfolio = () => {
       const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
 
       if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
-        setActiveIndex(3);
+        setActiveIndex(2);
       }
     };
 
