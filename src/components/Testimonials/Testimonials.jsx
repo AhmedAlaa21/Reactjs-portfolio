@@ -3,8 +3,8 @@ import "./Testimonials.css";
 import AVTR1 from "../../assets/edriss.jpg";
 import AVTR2 from "../../assets/placeholder.jpg";
 import AVTR3 from "../../assets/placeholder.jpg";
-import AVTR4 from "../../assets/nabout.png";
-import AVTR5 from "../../assets/ahmedbasha.png";
+// import AVTR4 from "../../assets/nabout.png";
+// import AVTR5 from "../../assets/ahmedbasha.png";
 
 // import Swiper core and required modules
 import { Pagination } from "swiper";
@@ -23,25 +23,25 @@ const Testimonials = () => {
       clientName: "Mohamed Edriss",
       review: "أحمد علاء مصمم مواقع متميز و الكود الخاص بيه ممتاز ..اللهم بارك",
     },
-    {
-      id: 5,
-      imgPath: AVTR5,
-      clientName: "Ahmed El-Basha",
-      review: "ما شاء الله شغل محترم ..  شكرا",
-    },
+    // {
+    //   id: 5,
+    //   imgPath: AVTR5,
+    //   clientName: "Ahmed El-Basha",
+    //   review: "ما شاء الله شغل محترم ..  شكرا",
+    // },
     {
       id: 3,
       imgPath: AVTR3,
       clientName: "Mohamed Hussein",
       review: "أرسلت لأحمد تصميم فيجما و نفذه بمنتهى الاحترافيه .. بالتوفيق",
     },
-    {
-      id: 4,
-      imgPath: AVTR4,
-      clientName: "Ahmed Nabout",
-      review:
-        "أحمد يعتبر شريكي من أيام الكلية و الشغل معاه مريح لأنه عنده القدرة على تنظيم الوقت و التاسكات",
-    },
+    // {
+    //   id: 4,
+    //   imgPath: AVTR4,
+    //   clientName: "Ahmed Nabout",
+    //   review:
+    //     "أحمد يعتبر شريكي من أيام الكلية و الشغل معاه مريح لأنه عنده القدرة على تنظيم الوقت و التاسكات",
+    // },
     {
       id: 2,
       imgPath: AVTR2,
