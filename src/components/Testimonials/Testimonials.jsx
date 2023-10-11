@@ -24,11 +24,10 @@ const Testimonials = () => {
       review: "أحمد علاء مصمم مواقع متميز و الكود الخاص بيه ممتاز ..اللهم بارك",
     },
     {
-      id: 2,
-      imgPath: AVTR2,
-      clientName: "Manal Mohamed",
-      review:
-        "طلبت من المهندس أحمد موقع و تم الاستلام قبل ميعاد التسليم و بجد بشكره جدا",
+      id: 5,
+      imgPath: AVTR5,
+      clientName: "Ahmed El-Basha",
+      review: "ما شاء الله شغل محترم ..  شكرا",
     },
     {
       id: 3,
@@ -44,14 +43,15 @@ const Testimonials = () => {
         "أحمد يعتبر شريكي من أيام الكلية و الشغل معاه مريح لأنه عنده القدرة على تنظيم الوقت و التاسكات",
     },
     {
-      id: 5,
-      imgPath: AVTR5,
-      clientName: "Ahmed El-Basha",
-      review: "ما شاء الله شغل محترم ..  شكرا",
+      id: 2,
+      imgPath: AVTR2,
+      clientName: "Manal Mohamed",
+      review:
+        "طلبت من المهندس أحمد موقع و تم الاستلام قبل ميعاد التسليم و بجد بشكره جدا",
     },
   ];
   return (
-    <section id="testimonials">
+    <section className="section" id="testimonials">
       <h5>Review from clients</h5>
       <h2>Testimonials</h2>
       <Swiper
