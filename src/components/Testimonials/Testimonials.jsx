@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Testimonials.css";
 import AVTR1 from "../../assets/edriss.jpg";
 import AVTR2 from "../../assets/placeholder.jpg";
@@ -11,11 +11,30 @@ import { Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { useScrollContext } from "../../ScrollContext";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 const Testimonials = () => {
+  const { setActiveIndex } = useScrollContext();
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
+
+      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+        setActiveIndex(4);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setActiveIndex]);
   const reviews = [
     {
       id: 1,
