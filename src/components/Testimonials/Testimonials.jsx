@@ -1,9 +1,10 @@
 import React from "react";
 import "./Testimonials.css";
-import AVTR1 from "../../assets/avatar1.jpg";
-import AVTR2 from "../../assets/avatar2.jpg";
-import AVTR3 from "../../assets/avatar3.jpg";
-import AVTR4 from "../../assets/avatar4.jpg";
+import AVTR1 from "../../assets/edriss.jpg";
+import AVTR2 from "../../assets/placeholder.jpg";
+import AVTR3 from "../../assets/placeholder.jpg";
+import AVTR4 from "../../assets/nabout.png";
+import AVTR5 from "../../assets/ahmedbasha.png";
 
 // import Swiper core and required modules
 import { Pagination } from "swiper";
@@ -19,30 +20,34 @@ const Testimonials = () => {
     {
       id: 1,
       imgPath: AVTR1,
-      clientName: "Tina Snow",
-      review:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atquererum aperiam nisi, voluptate necessitatibus nesciunt sapientenatus nemo neque. Praesentium perspiciatis quidem repudiandae aliquid odio eum esse nam veritatis laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores quae saepe! Accusamus ratione perspiciatis, repellendus architecto reprehenderit perferendis quos unde sequi distinctio. Maxime eum at consectetur veniam veritatis qui!",
+      clientName: "Mohamed Edriss",
+      review: "أحمد علاء مصمم مواقع متميز و الكود الخاص بيه ممتاز ..اللهم بارك",
     },
     {
       id: 2,
       imgPath: AVTR2,
-      clientName: "Shatta Wale",
+      clientName: "Manal Mohamed",
       review:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atquererum aperiam nisi, voluptate necessitatibus nesciunt sapientenatus nemo neque. Praesentium perspiciatis quidem repudiandae aliquid odio eum esse nam veritatis laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores quae saepe! Accusamus ratione perspiciatis, repellendus architecto reprehenderit perferendis quos unde sequi distinctio. Maxime eum at consectetur veniam veritatis qui!",
+        "طلبت من المهندس أحمد موقع و تم الاستلام قبل ميعاد التسليم و بجد بشكره جدا",
     },
     {
       id: 3,
       imgPath: AVTR3,
-      clientName: "Kwame Despite",
-      review:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atquererum aperiam nisi, voluptate necessitatibus nesciunt sapientenatus nemo neque. Praesentium perspiciatis quidem repudiandae aliquid odio eum esse nam veritatis laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores quae saepe! Accusamus ratione perspiciatis, repellendus architecto reprehenderit perferendis quos unde sequi distinctio. Maxime eum at consectetur veniam veritatis qui!",
+      clientName: "Mohamed Hussein",
+      review: "أرسلت لأحمد تصميم فيجما و نفذه بمنتهى الاحترافيه .. بالتوفيق",
     },
     {
       id: 4,
       imgPath: AVTR4,
-      clientName: "Ernest Acheiver",
+      clientName: "Ahmed Nabout",
       review:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atquererum aperiam nisi, voluptate necessitatibus nesciunt sapientenatus nemo neque. Praesentium perspiciatis quidem repudiandae aliquid odio eum esse nam veritatis laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores quae saepe! Accusamus ratione perspiciatis, repellendus architecto reprehenderit perferendis quos unde sequi distinctio. Maxime eum at consectetur veniam veritatis qui!",
+        "أحمد يعتبر شريكي من أيام الكلية و الشغل معاه مريح لأنه عنده القدرة على تنظيم الوقت و التاسكات",
+    },
+    {
+      id: 5,
+      imgPath: AVTR5,
+      clientName: "Ahmed El-Basha",
+      review: "ما شاء الله شغل محترم ..  شكرا",
     },
   ];
   return (

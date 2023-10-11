@@ -15,11 +15,11 @@ function App() {
     <ScrollProvider>
       <Header />
       <Nav />
-      <About  />
-      <Experience  />
+      <About />
+      <Experience />
       <Services />
-      <Portfolio  />
-      {/* <Testimonials /> */}
+      <Portfolio />
+      <Testimonials />
       <Contact />
       <Footer />
     </ScrollProvider>
