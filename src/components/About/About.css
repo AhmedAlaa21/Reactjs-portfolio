@@ -88,6 +88,34 @@
   }
 }
 
+/* Media Queries for MD devices */
+@media screen and (max-width: 850px) {
+  .about_me {
+    width: 65%;
+    margin: 0 auto 5rem;
+    height: 400px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  /* .about_me img {
+    height: 90%;
+  } */
+
+  .about_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .about_content {
+    text-align: center;
+  }
+
+  .about_content p {
+    margin: 1.5rem 0;
+  }
+}
+
 /* Media Queries for Small devices */
 @media screen and (max-width: 600px) {
   .about_me {
