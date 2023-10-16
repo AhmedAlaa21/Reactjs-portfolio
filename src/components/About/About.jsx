@@ -61,12 +61,13 @@ const About = () => {
             </article>
           </div>
           <p>
-            Passionate ReactJS and Next.js developer with 4+ years of ReactJS,
-            2+ years of React Native and 1+ year of Next.js experience.
-            Proficient in crafting seamless, interactive user interfaces and
-            optimizing application performance. A collaborator who thrives on
-            teamwork, constantly learning, and staying updated with the latest
-            technologies. Let's connect to create exceptional web experiences!
+            Experienced ReactJS and Next.JS Developer with over four years of
+            ReactJS, two years of React Native, and a year of Next.js expertise.
+            Skilled in designing fluid, interactive user interfaces and
+            enhancing application performance. A dedicated collaborator who
+            excels in team environments, consistently pursues learning, and
+            remains abreast of cutting-edge technologies. Eager to connect and
+            contribute to the development of outstanding web experiences.
             <br />
             <br />I possess extensive expertise in leveraging Chat GPT and other
             AI tools to enhance and maximize productivity.
