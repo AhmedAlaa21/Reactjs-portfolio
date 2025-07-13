@@ -18,6 +18,39 @@
   cursor: default;
 }
 
+/* Featured service styling for Web Development */
+.featured-service {
+  transform: scale(1.05);
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 4rem 2rem rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  position: relative;
+}
+
+.featured-service:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.featured-service .service_head {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-variant));
+  padding: 2.5rem;
+}
+
+.featured-service .service_head h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.featured-service .service_list {
+  padding: 2.5rem;
+}
+
+.featured-service .service_list p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .service_head {
   background: var(--color-primary);
   padding: 2rem;
@@ -59,6 +92,15 @@
   .service {
     height: auto;
   }
+  
+  .featured-service {
+    transform: scale(1.02);
+    grid-column: span 2;
+  }
+  
+  .featured-service:hover {
+    transform: scale(1.03);
+  }
 }
 
 /* Media Queries for Small devices */
@@ -66,5 +108,30 @@
   .services_container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .featured-service {
+    transform: none;
+    grid-column: span 1;
+  }
+  
+  .featured-service:hover {
+    transform: none;
+  }
+  
+  .featured-service .service_head {
+    padding: 2rem;
+  }
+  
+  .featured-service .service_head h3 {
+    font-size: 1.1rem;
+  }
+  
+  .featured-service .service_list {
+    padding: 2rem;
+  }
+  
+  .featured-service .service_list p {
+    font-size: 0.9rem;
   }
 }

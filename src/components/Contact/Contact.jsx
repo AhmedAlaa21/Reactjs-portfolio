@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -6,28 +6,9 @@ import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useScrollContext } from "../../ScrollContext";
 
 const Contact = () => {
   const form = useRef();
-  const { setActiveIndex } = useScrollContext();
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sectionTop = sectionRef.current.getBoundingClientRect().top;
-      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
-
-      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
-        setActiveIndex(5);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [setActiveIndex]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -64,7 +45,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="section">
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
       <div className="container contact_container">

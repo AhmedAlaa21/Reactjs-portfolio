@@ -1,40 +1,37 @@
-import React, { useEffect, useRef } from "react";
-import ME from "../../assets/Aboutme.png";
+import React, { useState } from "react";
+import ProfileImg from "../../assets/profile-img.jpeg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import CountUp from "react-countup";
-import { useScrollContext } from "../../ScrollContext";
 import "./About.css";
 
 const About = () => {
-  const { setActiveIndex } = useScrollContext();
-  const sectionRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sectionTop = sectionRef.current.getBoundingClientRect().top;
-      const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
-
-      if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
-        setActiveIndex(1);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [setActiveIndex]);
+  const handleImageClick = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 600);
+    }
+  };
 
   return (
-    <section id="about" className="section" ref={sectionRef}>
+    <section id="about" className="section">
       <h5>Get to know</h5>
       <h2>Who Am I?</h2>
 
       <div className="container about_container">
         <div className="about_me">
-          <img src={ME} alt="about me" style={{ objectFit: "cover" }} />
+          <div 
+            className={`profile_image_container ${isAnimating ? 'bounce' : ''}`}
+            onClick={handleImageClick}
+            style={{ cursor: 'pointer' }}
+          >
+            <img src={ProfileImg} alt="Ahmed Mohamed Alaa" />
+          </div>
         </div>
         <div className="about_content">
           <div className="about_cards">
@@ -42,21 +39,21 @@ const About = () => {
               <FaAward className="about_card_icon" />
               <h5>Experience</h5>
               <small>
-                <CountUp start={-5} end={4} duration={5} />+ years working
+                <CountUp start={-5} end={5} duration={1} />+ years working
               </small>
             </article>
             <article className="about_card">
-              <FiUsers />
+              <FiUsers className="about_card_icon" />
               <h5>Clients</h5>
               <small>
-                <CountUp start={0} end={7} duration={5} />+ Satisfied Clients
+                <CountUp start={0} end={11} duration={2} />+ Satisfied Clients
               </small>
             </article>
             <article className="about_card">
-              <VscFolderLibrary />
+              <VscFolderLibrary className="about_card_icon"  />
               <h5>Projects</h5>
               <small>
-                <CountUp start={0} end={60} duration={5} />+ completed Projects
+                <CountUp start={0} end={23} duration={3} />+ completed
               </small>
             </article>
           </div>
@@ -73,7 +70,7 @@ const About = () => {
             AI tools to enhance and maximize productivity.
           </p>
           <a href="#contact" className="btn btn-primary">
-            Let`s Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>
