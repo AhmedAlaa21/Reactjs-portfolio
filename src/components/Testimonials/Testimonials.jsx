@@ -7,7 +7,7 @@ import AVTR3 from "../../assets/placeholder.jpg";
 // import AVTR5 from "../../assets/ahmedbasha.png";
 
 // import Swiper core and required modules
-import { Pagination } from "swiper";
+import { Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
