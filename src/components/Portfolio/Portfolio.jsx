@@ -21,8 +21,8 @@ const Portfolio = () => {
     {
       id: "12",
       imgPath: IMG12,
-      title: "Tadarab Platform",
-      url: "https://m.tadarab.com/",
+      title: "Tadarab",
+      url: "https://tadarab.com/",
       gitProject: "",
     },
     {
@@ -105,14 +105,14 @@ const Portfolio = () => {
   ];
 
   const handleLoadMore = () => {
-    setVisibleProjects(prev => Math.min(prev + 6, portfolioProjects.length));
+    setVisibleProjects((prev) => Math.min(prev + 6, portfolioProjects.length));
   };
 
   const handleGitHubClick = (gitProject) => {
     if (!gitProject || gitProject === "") {
       setShowModal(true);
     } else {
-      window.open(gitProject, '_blank', 'noreferrer');
+      window.open(gitProject, "_blank", "noreferrer");
     }
   };
 
@@ -132,7 +132,9 @@ const Portfolio = () => {
               <h3>{portfolioProject.title}</h3>
               <div className="portfolio_item-cta">
                 <button
-                  className={`btn ${!portfolioProject.gitProject ? 'btn-disabled' : ''}`}
+                  className={`btn ${
+                    !portfolioProject.gitProject ? "btn-disabled" : ""
+                  }`}
                   onClick={() => handleGitHubClick(portfolioProject.gitProject)}
                 >
                   GitHub
@@ -150,10 +152,10 @@ const Portfolio = () => {
           );
         })}
       </div>
-      
+
       {hasMoreProjects && (
         <div className="load-more-container">
-          <button 
+          <button
             className="btn btn-primary load-more-btn"
             onClick={handleLoadMore}
           >
@@ -168,7 +170,7 @@ const Portfolio = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Private Repository</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setShowModal(false)}
               >
@@ -180,7 +182,7 @@ const Portfolio = () => {
               <p>Feel free to check out the live demo instead!</p>
             </div>
             <div className="modal-footer">
-              <button 
+              <button
                 className="btn btn-primary"
                 onClick={() => setShowModal(false)}
               >

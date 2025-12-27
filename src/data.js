@@ -59,3 +59,36 @@ export const backendSkills = [
     experience: "Experienced",
   },
 ];
+
+export const footerLinks = [
+  {
+    id: 0,
+    title: "Home",
+    link: "#start",
+  },
+  {
+    id: 1,
+    title: "About",
+    link: "#about",
+  },
+  {
+    id: 2,
+    title: "Experience",
+    link: "#exp",
+  },
+  {
+    id: 3,
+    title: "Services",
+    link: "#services",
+  },
+  {
+    id: 4,
+    title: "Testimonials",
+    link: "#testimonials",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    link: "#contact",
+  },
+];
