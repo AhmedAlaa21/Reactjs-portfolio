@@ -58,7 +58,7 @@ const About = () => {
             </article>
           </div>
           <p>
-            Full-stack developer specializing in React ecosystems with 4+ years
+            Frontend Engineer specializing in React ecosystems with 5+ years
             building responsive web applications, 2 years crafting mobile
             experiences with React Native, and extensive Next.js expertise. I
             create performant, user-focused interfaces while leveraging modern
