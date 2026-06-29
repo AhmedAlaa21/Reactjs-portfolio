@@ -157,9 +157,42 @@
 }
 
 .about_content p {
-  margin: 2rem 0 2.6rem;
+  margin: 1rem 0;
   color: var(--color-light);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.about_education {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--color-bg-variant);
+  border-radius: 1rem;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.about_education_icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.about_education h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.about_education p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+}
+
+.about_languages {
+  font-size: 0.9rem;
+  margin: 1rem 0 1.5rem !important;
 }
 
 /* Media Queries for MD devices */

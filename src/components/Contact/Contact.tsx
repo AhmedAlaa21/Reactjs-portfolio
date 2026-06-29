@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef, type FormEvent } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -8,10 +8,24 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const notify = () => {
+    toast.success("We received your message, Thank you", {
+      position: "bottom-center",
+    });
+  };
+
+  const notifyError = () => {
+    toast.error("Error occurred please try again!", {
+      position: "bottom-center",
+    });
+  };
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
+
     emailjs
       .sendForm(
         "service_t93aflo",
@@ -21,27 +35,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           if (result.status === 200) notify();
-          else notify2();
-          e.target.reset();
+          else notifyError();
+          form.current?.reset();
         },
-        (error) => {
-          console.log(error.text);
-          notify2();
-        }
+        () => notifyError()
       );
-  };
-
-  const notify = () => {
-    toast.success("We received your message, Thank you", {
-      position: toast.POSITION.BOTTOM_CENTER,
-    });
-  };
-  const notify2 = () => {
-    toast.error("Error occured please try again!", {
-      position: toast.POSITION.BOTTOM_CENTER,
-    });
   };
 
   return (
@@ -79,7 +78,7 @@ const Contact = () => {
             <h4>Whatsapp</h4>
             <h5>+20 114-224-5739</h5>
             <a
-              href="https://api.whatsapp.com/send?phone=01142245739"
+              href="https://api.whatsapp.com/send?phone=201142245739"
               target="_blank"
               rel="noreferrer"
             >
@@ -87,7 +86,6 @@ const Contact = () => {
             </a>
           </article>
         </div>
-        {/* end of contact options */}
         <form ref={form} onSubmit={sendEmail}>
           <input
             type="text"
@@ -98,10 +96,10 @@ const Contact = () => {
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea
             name="message"
-            rows="7"
+            rows={7}
             placeholder="Your Message"
             required
-          ></textarea>
+          />
           <button type="submit" className="btn btn-primary submit-btn">
             Send Message
           </button>

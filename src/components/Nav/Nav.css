@@ -21,7 +21,7 @@ nav:hover {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-nav a{
+nav button {
     background: transparent;
     padding: 0.9rem;
     border-radius: 50%;
@@ -31,9 +31,11 @@ nav a{
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    border: none;
+    cursor: pointer;
 }
 
-nav a::before {
+nav button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -47,29 +49,29 @@ nav a::before {
     z-index: -1;
 }
 
-nav a:hover{
+nav button:hover{
     background: rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-nav a.active{
+nav button.active{
     background: var(--color-primary);
     color: var(--color-bg);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.4);
 }
 
-nav a.active::before {
+nav button.active::before {
     transform: scale(1);
 }
 
 /* Add smooth transition for icon color changes */
-nav a svg {
+nav button svg {
     transition: all 0.3s ease;
 }
 
-nav a:hover svg {
+nav button:hover svg {
     transform: scale(1.1);
 }
 
@@ -81,7 +83,7 @@ nav a:hover svg {
         bottom: 1.5rem;
     }
     
-    nav a {
+    nav button {
         padding: 0.7rem;
         font-size: 1rem;
     }

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +11,19 @@
 }
 
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-rgb: 77, 181, 255;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-bg: #0a0f1e;
+  --color-bg-variant: #111827;
+  --color-surface: #1a2236;
+  --color-primary: #38bdf8;
+  --color-primary-rgb: 56, 189, 248;
+  --color-primary-variant: rgba(56, 189, 248, 0.35);
+  --color-accent-violet: #a78bfa;
+  --color-accent-violet-rgb: 167, 139, 250;
+  --color-white: #f8fafc;
+  --color-light: rgba(248, 250, 252, 0.65);
+
+  --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #a78bfa 100%);
+  --gradient-surface: linear-gradient(145deg, rgba(26, 34, 54, 0.9), rgba(17, 24, 39, 0.95));
 
   --transition: all 400ms ease;
 
@@ -30,18 +37,29 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-variant);
+  border-radius: 3px;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
-  background-image: url("../src/assets/bg-texture.png");
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139, 92, 246, 0.08), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 80%, rgba(56, 189, 248, 0.06), transparent);
+  background-attachment: fixed;
 }
-
-/* General Styles */
 
 .container {
   width: var(--container-width-lg);
@@ -54,12 +72,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2.5rem;
 }
+
 section {
   margin-top: 8rem;
 }
@@ -70,13 +89,23 @@ section > h5 {
   color: var(--color-light);
 }
 
+section > h5 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
 section > h2 {
-  color: var(--color-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 3rem;
 }
 
 .text-light {
-  color: var(--color-primary-variant);
+  color: var(--color-light);
 }
 
 a {
@@ -92,22 +121,36 @@ a:hover {
   width: max-content;
   display: inline-block;
   color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   transition: var(--transition);
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(56, 189, 248, 0.05);
 }
 
 .btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
   color: var(--color-bg);
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  color: var(--color-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.35);
+  filter: brightness(1.1);
 }
 
 img {
@@ -116,24 +159,22 @@ img {
   object-fit: cover;
 }
 
-/* Media Queries for MD devices */
-@media screen and (max-width: 1024px){
-    .container {
-        width: var(--container-width-md);
-    }
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
 
-    section {
-        margin-top: 6rem;
-    }
+  section {
+    margin-top: 6rem;
+  }
 }
 
-/* Media Queries for small devices */
-@media screen and (max-width: 600px){
-    .container {
-        width: var(--container-width-sm);
-    }
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
 
-    section > h2 {
-        margin-bottom: 2rem;
-    }
+  section > h2 {
+    margin-bottom: 2rem;
+  }
 }

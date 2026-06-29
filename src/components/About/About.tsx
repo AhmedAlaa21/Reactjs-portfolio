@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProfileImg from "../../assets/ahmed-mohamed-alaa.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import { HiOutlineAcademicCap } from "react-icons/hi";
 import CountUp from "react-countup";
+import { profileSummary, education, languages } from "../../data";
 import "./About.css";
 
 const About = () => {
@@ -12,9 +14,7 @@ const About = () => {
   const handleImageClick = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 600);
+      setTimeout(() => setIsAnimating(false), 600);
     }
   };
 
@@ -29,6 +29,10 @@ const About = () => {
             className={`profile_image_container ${isAnimating ? "bounce" : ""}`}
             onClick={handleImageClick}
             style={{ cursor: "pointer" }}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === "Enter" && handleImageClick()}
+            aria-label="Profile photo"
           >
             <img src={ProfileImg} alt="Ahmed Mohamed Alaa" />
           </div>
@@ -39,37 +43,45 @@ const About = () => {
               <FaAward className="about_card_icon" />
               <h5>Experience</h5>
               <small>
-                <CountUp start={-5} end={5} duration={1} />+ years working
+                <CountUp start={0} end={5} duration={1.5} />+ years shipping
               </small>
             </article>
             <article className="about_card">
               <FiUsers className="about_card_icon" />
-              <h5>Clients</h5>
+              <h5>Active Users</h5>
               <small>
-                <CountUp start={0} end={11} duration={2} />+ Satisfied Clients
+                <CountUp start={0} end={50} duration={2} suffix="K+" />
               </small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_card_icon" />
-              <h5>Projects</h5>
+              <h5>Products Led</h5>
               <small>
-                <CountUp start={0} end={23} duration={3} />+ completed
+                <CountUp start={0} end={3} duration={1.5} /> flagship apps
               </small>
             </article>
           </div>
+          <p>{profileSummary}</p>
           <p>
-            Frontend Engineer specializing in React ecosystems with 5+ years
-            building responsive web applications, 2 years crafting mobile
-            experiences with React Native, and extensive Next.js expertise. I
-            create performant, user-focused interfaces while leveraging modern
-            AI tools to accelerate development workflows and solve complex
-            problems efficiently.
-            <br />
-            <br />I thrive in collaborative environments where I can both
-            contribute to the team's success and continue growing my technical
-            skills. Always exploring emerging technologies and best practices to
-            deliver exceptional web experiences.
+            Known for clean architecture, thorough code reviews, and translating
+            ambiguous requirements into reliable, maintainable UIs at scale.
           </p>
+
+          <div className="about_education">
+            <HiOutlineAcademicCap className="about_education_icon" />
+            <div>
+              <h4>{education.degree}</h4>
+              <p>
+                {education.institution}, {education.location} · {education.period}
+              </p>
+              <p className="text-light">{education.project}</p>
+            </div>
+          </div>
+
+          <p className="about_languages">
+            <strong>Languages:</strong> {languages.join(" · ")}
+          </p>
+
           <a href="#contact" className="btn btn-primary">
             Let&apos;s Talk
           </a>
